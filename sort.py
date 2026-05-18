@@ -1,0 +1,14 @@
+def checksorted(a):
+    length = len(a)
+
+    if length == 1 or length == 0:
+        return True
+    
+    return a[0] <= a[1] and checksorted(a[1:])
+
+a = [1,2,3,5,6,8,9]
+
+if checksorted(a):
+    print("\nYes it is sorted")
+else:
+    print("\nNo it isn't sorted")
